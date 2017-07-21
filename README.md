@@ -20,7 +20,7 @@ const Score = (props) =>
   <AnimateOnChange
     baseClassName="Score"
     animationClassName="Score--bounce"
-    component="div"
+    component="span"
     animate={props.diff != 0}>
       Score: {props.score}
   </AnimateOnChange>
