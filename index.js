@@ -86,7 +86,7 @@ class AnimateOnChange extends Component {
 
   render () {
     let {
-      className: baseClassName,
+      baseClassName: className,
       animationClassName,
       animate,
       component: Component,

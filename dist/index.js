@@ -126,11 +126,11 @@ var AnimateOnChange = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          baseClassName = _props.className,
+          className = _props.baseClassName,
           animationClassName = _props.animationClassName,
           animate = _props.animate,
           Component = _props.component,
-          props = _objectWithoutProperties(_props, ['className', 'animationClassName', 'animate', 'component']);
+          props = _objectWithoutProperties(_props, ['baseClassName', 'animationClassName', 'animate', 'component']);
 
       if (this.props.animate && !this.state.clearAnimationClass) {
         className += ' ' + this.props.animationClassName;
@@ -147,7 +147,8 @@ AnimateOnChange.propTypes = {
   children: _react2.default.PropTypes.any.isRequired,
   animate: _react2.default.PropTypes.bool.isRequired,
   baseClassName: _react2.default.PropTypes.string.isRequired,
-  animationClassName: _react2.default.PropTypes.string.isRequired
+  animationClassName: _react2.default.PropTypes.string.isRequired,
+  component: _react2.default.PropTypes.string
 };
 
 AnimateOnChange.defaultProps = {
