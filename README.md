@@ -20,6 +20,7 @@ const Score = (props) =>
   <AnimateOnChange
     baseClassName="Score"
     animationClassName="Score--bounce"
+    component="div"
     animate={props.diff != 0}>
       Score: {props.score}
   </AnimateOnChange>
@@ -49,6 +50,8 @@ Also, [see the example folder](example).
 `animationClassName {string}` : Animation class name. Added when `animate == true`. Removed when the event [`animationend`](http://www.w3.org/TR/css3-animations/#animationend) is triggered.
 
 `animate {bool}` : Wheter component should animate.
+
+`component {string}` : The element type to use as root element. Defaults to `span`.
 
 ## Develop
 ```sh
