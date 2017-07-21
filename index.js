@@ -85,15 +85,19 @@ class AnimateOnChange extends Component {
   }
 
   render () {
-    let className = this.props.baseClassName
+    let {
+      className: baseClassName,
+      animationClassName,
+      animate,
+      component: Component,
+      ...props
+    } = this.props;
 
     if (this.props.animate && !this.state.clearAnimationClass) {
       className += ` ${this.props.animationClassName}`
     }
 
-    return <span ref='root' className={className}>
-      {this.props.children}
-    </span>
+    return <Component ref='root' className={className} {...props} />
   }
 }
 
@@ -103,5 +107,9 @@ AnimateOnChange.propTypes = {
   baseClassName: React.PropTypes.string.isRequired,
   animationClassName: React.PropTypes.string.isRequired
 }
+
+AnimateOnChange.defaultProps = {
+  component: 'span'
+};
 
 export default AnimateOnChange
