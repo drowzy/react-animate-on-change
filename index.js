@@ -105,7 +105,8 @@ AnimateOnChange.propTypes = {
   children: React.PropTypes.any.isRequired,
   animate: React.PropTypes.bool.isRequired,
   baseClassName: React.PropTypes.string.isRequired,
-  animationClassName: React.PropTypes.string.isRequired
+  animationClassName: React.PropTypes.string.isRequired,
+  component: React.PropTypes.string
 }
 
 AnimateOnChange.defaultProps = {
